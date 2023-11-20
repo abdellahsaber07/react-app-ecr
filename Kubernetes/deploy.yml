@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: react-app-deployment
   labels:
-    app: react-app
+    app: ecr-test
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: react-app
+      app: ecr-test
   template:
     metadata:
       labels:
-        app: react-app
+        app: ecr-test
     spec:
       containers:
-        - name: react-app
-          image: 563940537117.dkr.ecr.us-east-1.amazonaws.com/react-app-ecr:latest
+        - name: ecr-test
+          image: 322421043052.dkr.ecr.us-east-1.amazonaws.com/ecr-test:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000 # Should match the port your React app is running on
