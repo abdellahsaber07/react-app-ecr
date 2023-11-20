@@ -27,4 +27,5 @@ jobs:
           docker build -t react-app-ecr .
           docker tag react-app-ecr:latest 322421043052.dkr.ecr.us-east-1.amazonaws.com/ecr-test:latest
       - name: Push Docker Image to ecr
-        run: docker push 322421043052.dkr.ecr.us-east-1.amazonaws.com/ecr-test:latestclea
+        run: docker push 322421043052.dkr.ecr.us-east-1.amazonaws.com/ecr-test:latest
+        
