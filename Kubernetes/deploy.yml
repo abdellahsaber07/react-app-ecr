@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: react-app-deployment
   labels:
-    app: ecr-test
+    app: react-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ecr-test
+      app: react-app
   template:
     metadata:
       labels:
-        app: ecr-test
+        app: react-app
     spec:
       containers:
-        - name: ecr-test
+        - name: react-app
           image: 322421043052.dkr.ecr.us-east-1.amazonaws.com/ecr-test:latest
           imagePullPolicy: Always
           ports:
